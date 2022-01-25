@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Conv_RFDewi-Bold';
+	src: url('fonts/RFDewi-Bold.eot');
+	src: local('☺'), url('fonts/RFDewi-Bold.woff') format('woff'), url('fonts/RFDewi-Bold.ttf') format('truetype'), url('fonts/RFDewi-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_RFDewiExpanded-Bold';
+	src: url('fonts/RFDewiExpanded-Bold.eot');
+	src: local('☺'), url('fonts/RFDewiExpanded-Bold.woff') format('woff'), url('fonts/RFDewiExpanded-Bold.ttf') format('truetype'), url('fonts/RFDewiExpanded-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_RFDewi-Regular';
+	src: url('fonts/RFDewi-Regular.eot');
+	src: local('☺'), url('fonts/RFDewi-Regular.woff') format('woff'), url('fonts/RFDewi-Regular.ttf') format('truetype'), url('fonts/RFDewi-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_RFDewi-Semibold';
+	src: url('fonts/RFDewi-Semibold.eot');
+	src: local('☺'), url('fonts/RFDewi-Semibold.woff') format('woff'), url('fonts/RFDewi-Semibold.ttf') format('truetype'), url('fonts/RFDewi-Semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    //font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}

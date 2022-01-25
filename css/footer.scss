@@ -1,0 +1,74 @@
+
+.footer {
+    background-color: #1E1E1E;
+    padding: 50px 0;
+    // display: none;
+
+    &__top-wrp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 767px) {
+            align-items: flex-start;
+        }
+    }
+    &__list {
+        display: flex;
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+    &__logo {
+        @media (max-width: 420px) {
+            max-width: 180px;
+            height: auto;
+            display: block;
+        }
+    }
+    &__list-item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        @media (max-width: 767px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__bottom-wrp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 77px;
+        span {
+            color: rgba(255, 255, 255, 0.53);
+        }
+        @media (max-width: 715px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__copy-icons {
+        display: flex;
+        align-items: center;
+    }
+    &__copy {
+        margin-right: 19px;
+    }
+    &__tg {
+        margin-right: 11px;
+    }
+
+    &__politics {
+        margin-right: 60px;
+        @media (max-width: 715px) {
+            margin-right: 15px;
+
+        }
+    }
+    &__contract,  &__politics {
+        @media (max-width: 415px) {
+            text-align: center;
+            display: block;
+        }
+    }
+}

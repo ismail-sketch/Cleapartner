@@ -1,0 +1,90 @@
+
+@import'fonts.scss';
+@import'normalize.scss';
+@import'header.scss';
+@import'main.scss';
+@import'about.scss';
+@import'advantage.scss';
+@import'reviews.scss';
+@import 'require.scss';
+@import 'request.scss';
+@import 'map.scss';
+@import 'contacts.scss';
+@import 'footer.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.wrapper {
+
+}
+
+a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+input {
+    border: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 45px;
+    font-size: calc(25px + 20 * (100vw / 1230));
+    @media (max-width: 767px) {
+        font-size: calc(25px + (20 + 20 * 0.7) * ((100vw - 320px) / 1230));
+    }
+}
+.underlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.666);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+}
+
+.about-sub-title {
+    font-size: calc(17px + 8 * (100vw / 1230));
+}
+@media (max-width: 767px) {
+    .about-sub-title {
+        font-weight: 700;
+        font-size: calc(17px + (8 + 8 * 0.7) * ((100vw - 320px) / 1230));
+    }
+}

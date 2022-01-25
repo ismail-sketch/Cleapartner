@@ -1,0 +1,177 @@
+body {
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    height: 114px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    z-index: 5;
+    transition: .3s;
+
+    @media (max-width: 1030px) {
+      height: 100px;
+    }
+    &.active {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.8);
+    }
+
+    &__logo {
+        margin-right: 15px;
+        img {
+          @media (max-width: 355px) {
+            width: 200px;
+            height: auto;
+          }
+        }
+    }
+    .container-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 0px;
+        //padding: 45px 0px;
+    }
+
+    .menu {
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 111px;
+            color: #fff;
+            font-size: 18px;
+            transition: all .3s;
+            @media (max-width: 1164px) {
+                margin-right: 0;
+            }
+            @media (max-width: 1030px) {
+                position: fixed;
+                background-color: #fff;
+                right: 0;
+                top: 0;
+                display: block;
+                width: 50%;
+                height: 100vh;
+                color: #000;
+                font-size: 20px;
+                padding: 30px 15px 15px 50px;
+                transform: translateX(100%);
+                z-index: 2;
+                &.active {
+                    transform: translateX(0%);
+                }
+            }
+            @media (max-width: 600px) {
+              width: 100%;
+            }
+        }
+        &__item {
+            color: inherit;
+            font-size: inherit;
+            transition: all .3s;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: rgb(5, 119, 201);
+                }
+              }
+              @media (max-width: 1030px) {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+              }
+
+        }
+    }
+    &__requisition {
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 15px;
+        transition: all .3s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: rgb(5, 119, 201);
+            }
+        }
+       @media (max-width: 1030px) {
+            display: none;
+       }
+    }
+}
+
+//burger
+.nav-icon-7{
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    @media (max-width: 1030px) {
+        display: block;
+        z-index: 3;
+    }
+  }
+  .nav-icon-7 span{
+    background-color:#fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+    &.active {
+        background-color: #000;
+    }
+  }
+  .nav-icon-7 span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .nav-icon-7 span:nth-child(2){
+    top:13px;
+    left: 0px;
+  }
+  .nav-icon-7 span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  .nav-icon-7:not(.open):hover span:nth-child(1){
+    transform: scaleX(.8);
+  }
+  .nav-icon-7:not(.open):hover span:nth-child(2){
+    transform: scaleX(.5);
+  }
+  .nav-icon-7:not(.open):hover span:nth-child(3){
+    transform: scaleX(.8);
+  }
+  .nav-icon-7.open span:nth-child(1){
+    transform: rotate(90deg);
+    top: 13PX;
+  }
+  .nav-icon-7.open span:nth-child(2){
+    transform: scale(0);
+    transition-duration: 50ms
+  }
+  .nav-icon-7.open span:nth-child(3){
+    top: 13PX;
+  }

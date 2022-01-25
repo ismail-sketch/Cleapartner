@@ -1,0 +1,147 @@
+
+.require {
+    min-height: 607px;
+    width: 100%;
+    background-image: url(../img/require/require__bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 85px 0px 50px 0px;
+    @media (max-width: 900px) {
+        padding-top: 40px;
+    }
+    //display: none;
+
+    &__title {
+        text-align: center;
+    }
+    &__content-wrp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 42px;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+    &__right-content {
+        @media (max-width: 900px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 470px) {
+            max-width: 100%;
+        }
+    }
+    &__left-content {
+        position: relative;
+        @media (max-width: 1133px) {
+            flex: 1 0 50%;
+        }
+    }
+
+    &__round {
+        animation: round;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @media (max-width: 1063px) {
+            max-width: 50%;
+            height: auto;
+        }
+    }
+    @keyframes round {
+        from {
+            transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(360deg)
+        }
+    }
+    &__audi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media (max-width: 1138px) {
+            width: 90%;
+            height: auto;
+        }
+    }
+    &__light-left {
+        position: absolute;
+        right: -68px;
+        top: 149px;
+    }
+    &__light-right {
+        position: absolute;
+        right: -278px;
+        top: 151px;
+    }
+    &__light-left, &__light-right  {
+        opacity: 0;
+        animation: blick;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        @media (max-width: 1138px) {
+            display: none;
+        }
+    }
+    @keyframes blick {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    &__list-item {
+        font-size: 16px;
+        position: relative;
+        @media (max-width: 477px) {
+            margin-left: 30px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 39px;
+        }
+        &::before {
+            content: '';
+            width: 19px;
+            height: 19px;
+            background-color: #00BF63;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-31px, -50%);
+        }
+    }
+    &__btn-wrp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translateX(-27px);
+        margin-top: 44px;
+        @media (max-width: 900px) {
+            margin: 0 auto;
+            transform: translateX(0px);
+            margin-top: 44px;
+            column-gap: 27px;
+        }
+        @media (max-width: 547px) {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        a {
+            display: block;
+            img {
+                border-radius: 10px;
+            }
+            // &:first-child {
+            //    margin-right: 27px;
+            // }
+        }
+    }
+}
